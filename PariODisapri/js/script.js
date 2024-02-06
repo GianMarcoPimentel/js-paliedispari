@@ -27,19 +27,25 @@ function randomNumber5() {
 /* function somma(userNumber, computerNumber){
     return userNumber + computerNumber;
 } */
-const numero1 = randomNumber();
+const numero1 = randomNumber5();
  
 //sommiamo i due numeri
-let sum = userNumber + computerNumber;
+let sum = userNumber + numero1;
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 function pariOdispari(sum){
     if (sum % 2 == 0){
-        return pari;
+        return "Pari";
     }  else {
-        return dispari;
+        return "Dispari";
     }
 }
 
+let risultato = pariOdispari(sum);
 
-console.log(sum);
+if(sceltaUtente == risultato){
+    document.getElementById("finish").innerHTML = `Hai scelto ${sceltaUtente}, e la somma dei due numeri è ${risultato}. Hai vinto`
+} else {
+    document.getElementById("finish").innerHTML = `Hai scelto ${sceltaUtente}, ma la somma dei due numeri è ${risultato}. Hai perso`
+
+}
