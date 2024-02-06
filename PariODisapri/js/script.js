@@ -9,10 +9,27 @@ Se l'utente ha indovinato l'esito (pari o dispari) della somma ha vinto, altrime
 */
 
 // Utente sceglie pari o dispari 
-const sceltaUtente = prompt("Scegli Pari o Dispari ?");
+let sceltaUtente ;
+do{
+    sceltaUtente = prompt("Scegli Pari o Dispari ?");
+
+    if(sceltaUtente != "Pari" && sceltaUtente != "Dispari" ){
+        alert("Ricarica la pagina e Inserisci la parola corretta")
+    
+    }
+} while(sceltaUtente != "Pari" && sceltaUtente != "Dispari" );
 
 // Utente inserisce un numero da 1 a 5 
-const userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
+let userNumber;
+do{
+     
+    userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
+/*     document.getElementById("#numero-utente").innerHTML = `Il numero scelto dall'utente è ${userNumber}`;
+ */    if(userNumber < 1 || userNumber > 5 || isNaN(userNumber) ){
+        alert("Ricarica la pagina e Inserisci il numero nel range corretto")
+    }
+
+} while(userNumber < 1 || userNumber > 5 || isNaN(userNumber));
 
 //Genero un numero random(da 1 a 5)per il computer(usando una funzione).
 
@@ -21,14 +38,10 @@ function randomNumber5() {
 
     return random;
 }
+let numero1 = randomNumber5();
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 
-/* function somma(userNumber, computerNumber){
-    return userNumber + computerNumber;
-} */
-const numero1 = randomNumber5();
- 
 //sommiamo i due numeri
 let sum = userNumber + numero1;
 

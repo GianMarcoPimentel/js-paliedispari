@@ -6,3 +6,5 @@ Creare una funzione per capire se la parola inserita è palindroma
 ATTENZIONE :
 No .reverse, .split e .join
 */
+
+const userWord = prompt("Inserisci una parola")
