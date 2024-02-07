@@ -15,7 +15,7 @@ let parola = prompt("Inserisci una parola")
 function palindroma(parola){
     // Se un carattere non corrisponde al carattere nell'altra metà: NON palindroma
     for(i=0; i < parola.length / 2; i++){
-        if(parola[i] !== parola[parola.length -i -1]){
+        if(parola[i] !== parola[parola.length - i - 1]){
             return false;
         }
     }
